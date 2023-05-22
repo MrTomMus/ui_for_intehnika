@@ -1,0 +1,16 @@
+.container {
+    max-width: 976px;
+    margin: 0 auto;
+}
+
+.text {
+    font-family: 'Golos';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: -0.02em;
+    color: #15181C;
+    margin-top: 24px;
+    margin-bottom: 40px;
+}

@@ -1,0 +1,36 @@
+.header {
+
+}
+
+.container {
+    max-width: 976px;
+    margin: 0 auto;
+}
+
+.navigation {
+    margin-top: 30px;
+}
+
+.text__home {
+    font-family: 'Golos';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.01em;
+    color: rgba(14, 14, 14, 0.4);
+}
+
+.vector {
+    margin: 0 10px 0 10px;
+}
+
+.text__basket {
+    font-family: 'Golos';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.01em;
+    color: #15181C;
+}
