@@ -3,6 +3,12 @@
     margin: 0 auto;
 }
 
+.loading {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
 .text {
     font-family: 'Golos';
     font-style: normal;

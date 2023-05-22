@@ -1,9 +1,28 @@
-import React from "react";
 import classes from "../Basket/Basket.module.css"
 import vector from "../../assets/icon/Vector2.svg"
+import { useEffect } from "react";
+import catalog from "../../json/catalog.json"
+import { LoadingOutlined } from '@ant-design/icons';
+import { Spin } from 'antd';
 
-let Basket = () => {
-    return (
+
+let Basket = (props) => {
+
+    const antIcon = (
+        <LoadingOutlined
+          style={{
+            fontSize: 100,
+            color: '#FF6A2A',
+          }}
+          spin
+        />
+      );
+
+    useEffect(() => {
+        setTimeout(() => props.setState(catalog), 3000)
+    })
+
+    return ( !props.state[0] ? <div className={classes.loading}><Spin indicator={antIcon} /></div> : 
         <div className={classes.container}>
             <div className={classes.content}>
                 <div className={classes.title}>
@@ -18,9 +37,12 @@ let Basket = () => {
                     <img className={classes.img} src={vector} alt="vector" />
                     <span className={classes.deleteChoice}>Удалить выбранное</span>
                 </div>
+                <div className={classes.list}>
+
+                </div>
             </div>
         </div>
-    )
+)
 }
 
 export default Basket;

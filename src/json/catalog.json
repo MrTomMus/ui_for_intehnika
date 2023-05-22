@@ -1,0 +1,54 @@
+[
+    {
+        "id": 0,
+        "name": "Пластина наружная FL430",
+        "company": "ООО «Дарим добро»",
+        "img": "ui_for_intehnika/src/assets/img/img1.jpg",
+        "check": false,
+        "step": 12.3,
+        "diameter": 40,
+        "like": false,
+        "count": 0,
+        "onOrder": 0,
+        "inStock": 0  
+    },
+    {
+        "id": 1,
+        "name": "Фреза сборная для высоких подач концевая PALBIT020w16320-03-...",
+        "company": "ООО «Дарим добро»",
+        "img": "ui_for_intehnika/src/assets/img/img2.png",
+        "check": false,
+        "step": 12.3,
+        "diameter": 40,
+        "like": false,
+        "count": 0,
+        "onOrder": 0,
+        "inStock": 0  
+    },
+    {
+        "id": 2,
+        "name": "Фреза сборная концевая PALBIT 020w16320",
+        "company": "ООО «Дарим добро»",
+        "img": "ui_for_intehnika/src/assets/img/img3.jpg",
+        "check": false,
+        "step": 12.3,
+        "diameter": 40,
+        "like": false,
+        "count": 0,
+        "onOrder": 0,
+        "inStock": 0  
+    },
+    {
+        "id": 3,
+        "name": "Фреза концевая PALBIT 020w16320-03-07-020160",
+        "company": "ООО «Дарим добро»",
+        "img": "ui_for_intehnika/src/assets/img/img4.jpg",
+        "check": false,
+        "step": 12.3,
+        "diameter": 40,
+        "like": false,
+        "count": 0,
+        "onOrder": 0,
+        "inStock": 0  
+    }
+]
