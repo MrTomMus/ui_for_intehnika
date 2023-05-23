@@ -1,6 +1,5 @@
 import React from "react";
 import classes from "../ItemList/ItemList.module.css"
-import img from "../../../assets/img/img1.png" 
 import img2 from "../../../assets/icon/Vector3.svg"
 import img3 from "../../../assets/icon/Vector4.svg"
 import minus from "../../../assets/icon/Vector5.svg"
@@ -11,13 +10,18 @@ import question from "../../../assets/icon/Vector9.svg"
 
 let ItemsList = (props) => {
 
+    console.log(props)
+
+    let setCheck = (id) => {
+        props.setState(props.state.map(obj => obj.id === id ? {...obj, check: !obj.check} : obj))
+    }
 
     let item = props.state.map(obj => (
         <div key={obj.id} className={classes.item}>
                 <div className={classes.item__img}>
                     <label>
-                        <input type='checkbox'/>
-                        <span></span>  
+                        <input checked={obj.check} type='checkbox'/>
+                        <span onClick={() => setCheck(obj.id)}></span>  
                     </label>
                 </div>
                 <div className={classes.img}>

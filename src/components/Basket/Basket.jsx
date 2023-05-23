@@ -1,6 +1,6 @@
 import classes from "../Basket/Basket.module.css"
 import vector from "../../assets/icon/Vector2.svg"
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import catalog from "../../json/catalog.json"
 import { LoadingOutlined } from '@ant-design/icons';
 import { Spin } from 'antd';
@@ -8,7 +8,15 @@ import ItemsList from "./ItemList/ItemList";
 
 
 let Basket = (props) => {
+    
+    let [state, setState] = useState();
 
+    useEffect(() => {
+        if(state === undefined)
+            console.log('test')
+            setTimeout(() => setState(catalog), 1000)
+      
+    },[])
 
     const antIcon = (
         <LoadingOutlined
@@ -20,15 +28,14 @@ let Basket = (props) => {
         />
       );
 
-    useEffect(() => {
-        setTimeout(() => props.setState(catalog), 3000)
-    })
+    console.log(state)
 
-    return ( !props.state[0] ? <div className={classes.loading}><Spin indicator={antIcon} /></div> : 
+
+    return (state === undefined ? <div className={classes.loading}><Spin indicator={antIcon} /></div> : 
         <div className={classes.container}>
             <div className={classes.content}>
                 <div className={classes.title}>
-                    <h2 className={classes.text}>Моя Корзина <span className={classes.text__count}>{props.state.length}</span></h2>
+                    <h2 className={classes.text}>Моя Корзина <span className={classes.text__count}>{state.length}</span></h2>
                 </div>
                 <div className={classes.choice}>
                 <label>
@@ -40,7 +47,7 @@ let Basket = (props) => {
                     <span className={classes.deleteChoice}>Удалить выбранное</span>
                 </div>
                 <div className={classes.list}>
-                    <ItemsList state={props.state}/>
+                    <ItemsList state={state} setState={setState}/>
                 </div>
             </div>
         </div>
