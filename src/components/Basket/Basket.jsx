@@ -9,6 +9,7 @@ import ItemsList from "./ItemList/ItemList";
 
 let Basket = (props) => {
 
+
     const antIcon = (
         <LoadingOutlined
           style={{
@@ -27,7 +28,7 @@ let Basket = (props) => {
         <div className={classes.container}>
             <div className={classes.content}>
                 <div className={classes.title}>
-                    <h2 className={classes.text}>Моя Корзина <span className={classes.text__count}>Заглушка</span></h2>
+                    <h2 className={classes.text}>Моя Корзина <span className={classes.text__count}>{props.state.length}</span></h2>
                 </div>
                 <div className={classes.choice}>
                 <label>
@@ -39,7 +40,7 @@ let Basket = (props) => {
                     <span className={classes.deleteChoice}>Удалить выбранное</span>
                 </div>
                 <div className={classes.list}>
-                    <ItemsList/>
+                    <ItemsList state={props.state}/>
                 </div>
             </div>
         </div>

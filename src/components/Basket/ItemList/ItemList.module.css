@@ -6,9 +6,11 @@
     border-top: 1px solid rgba(0, 0, 0, 0.14);
 }
 
-.img {
+.img {    
+    width: 148px;
     margin-left: 37px;
 }
+
 
 .info {
     height: 158px;
@@ -18,6 +20,11 @@
     display: flex;
     align-self: flex-start;
     flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.name {
+    width: 462px;
 }
 
 .name__title {
@@ -42,7 +49,7 @@
 
 .like {
     height: 36px;
-    margin-left: 188px;
+    margin-left: 32px;
     display: flex;
     align-items: center;
     margin-right: 32px;
@@ -91,6 +98,15 @@
 
 .params {
     display: flex;
+    
+}
+
+.step,
+.diametr,
+.tool {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
 }
 
 .step h5,
@@ -123,4 +139,73 @@
 
 .diametr {
     margin-right: 40px;
+}
+
+.quantity {
+    margin-left: 216px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.quantity__title {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.quantity__titleTwo {
+    margin-top: 13px ;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.quantity__title h5 {
+    font-family: 'Golos';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #15181C;
+}
+
+.quantity__title span {
+    font-family: 'Golos';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.01em;
+    color: rgba(14, 14, 14, 0.4);
+    display: flex;
+}
+
+.quantity__titleTwo h5 {
+    font-family: 'Golos';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #15181C;
+}
+
+.quantity__titleTwo span {
+    font-family: 'Golos';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.01em;
+    color: rgba(14, 14, 14, 0.4);
+    display: flex;
+}
+
+.quantity__title span img {
+    cursor: pointer;
+    margin-left: 5px;
 }
