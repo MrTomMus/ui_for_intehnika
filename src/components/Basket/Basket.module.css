@@ -28,11 +28,13 @@
 .choice {
     display: flex;
     align-items: center;
+    margin-bottom: 24px;
     
 }
 
 label {
     margin-right: 10px;
+    margin-left: 2px ;
 }
 
 label input {

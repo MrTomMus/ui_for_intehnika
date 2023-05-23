@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import catalog from "../../json/catalog.json"
 import { LoadingOutlined } from '@ant-design/icons';
 import { Spin } from 'antd';
+import ItemsList from "./ItemList/ItemList";
 
 
 let Basket = (props) => {
@@ -38,7 +39,7 @@ let Basket = (props) => {
                     <span className={classes.deleteChoice}>Удалить выбранное</span>
                 </div>
                 <div className={classes.list}>
-
+                    <ItemsList/>
                 </div>
             </div>
         </div>

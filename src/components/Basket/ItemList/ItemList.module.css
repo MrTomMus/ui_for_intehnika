@@ -1,0 +1,126 @@
+.item {
+    max-width: 976px;
+    height: 218px;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.14);
+}
+
+.img {
+    margin-left: 37px;
+}
+
+.info {
+    height: 158px;
+    margin-top: 32px;
+    margin-left: 45px;
+    margin-bottom: 32px;
+    display: flex;
+    align-self: flex-start;
+    flex-wrap: wrap;
+}
+
+.name__title {
+    font-family: 'Golos';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -0.02em;
+    color: #15181C;
+}
+
+.company {
+    font-family: 'Golos';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.01em;
+    color: rgba(14, 14, 14, 0.4);
+}
+
+.like {
+    height: 36px;
+    margin-left: 188px;
+    display: flex;
+    align-items: center;
+    margin-right: 32px;
+}
+
+.like__icon {
+    margin-right: 19px;
+}
+
+.like__icon,
+.basket__icon {
+    cursor: pointer;
+}
+
+.counter {
+    width: 122px;
+    height: 36px;
+    right: 0px;
+    top: 28px;
+    border: 1px solid #EAEAEA;
+    border-radius: 37px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.counter span {
+    font-family: 'Golos';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #15181C;
+    font-weight: bold;
+}
+
+.minus {
+    margin-left: 19px;
+    cursor: pointer;
+}
+
+.plus {
+    margin-right: 19px;
+    cursor: pointer;
+}
+
+.params {
+    display: flex;
+}
+
+.step h5,
+.diametr h5,
+.tool h5 {
+    font-family: 'Golos';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -0.02em;
+    color: #15181C;
+}
+
+.step span,
+.diametr span,
+.tool span {
+    font-family: 'Golos';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.01em;
+    color: rgba(14, 14, 14, 0.4);
+}
+
+.step {
+    margin-right: 40px;
+}
+
+.diametr {
+    margin-right: 40px;
+}
