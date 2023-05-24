@@ -72,11 +72,17 @@ label span {
   }
 
   .img {
+    display: none;
     margin-right: 11px;
     cursor: pointer;
   }
 
+  .imgActive {
+    display: inline;
+  }
+
   .deleteChoice {
+    display: none;
     font-family: 'Golos';
     font-style: normal;
     font-weight: 500;
@@ -85,4 +91,8 @@ label span {
     letter-spacing: -0.02em;
     color: #15181C;
     cursor: pointer;
+  }
+
+  .deleteChoiceActive {
+    display: inline;
   }

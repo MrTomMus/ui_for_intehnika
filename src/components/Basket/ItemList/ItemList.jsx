@@ -16,6 +16,19 @@ let ItemsList = (props) => {
         props.setState(props.state.map(obj => obj.id === id ? {...obj, check: !obj.check} : obj))
     }
 
+    let deleteItem = (id) => {  
+        props.setState(props.state.filter(obj => {if(obj.id !== id) return obj}))
+    }
+
+    let setMinus = (id) => {
+        props.setState(props.state.map(obj => obj.id === id && obj.count > 0 ? {...obj, count: obj.count-1} : obj))
+    }
+
+    let setPlus = (id) => {
+        console.log('plus')
+        props.setState(props.state.map(obj => obj.id === id ? {...obj, count: obj.count+1} : obj))
+    }
+
     let item = props.state.map(obj => (
         <div key={obj.id} className={classes.item}>
                 <div className={classes.item__img}>
@@ -34,12 +47,21 @@ let ItemsList = (props) => {
                     </div>
                     <div className={classes.like}>
                         <img className={classes.like__icon} src={img2} alt="like" />
-                        <img className={classes.basket__icon} src={img3} alt="basket" />
+                        <img onClick={() => deleteItem(obj.id) } 
+                             className={classes.basket__icon} 
+                             src={img3} 
+                             alt="basket" />
                     </div>
                     <div className={classes.counter}>
-                        <img className={classes.minus} src={minus} alt="minus"/>
+                        <img onClick={() => setMinus(obj.id)}  
+                             className={classes.minus} 
+                             src={minus} 
+                             alt="minus"/>
                         <span className={classes.count}>{obj.count}</span>
-                        <img className={classes.plus} src={plus} alt="plus"/>
+                        <img onClick={() => setPlus(obj.id)} 
+                             className={classes.plus} 
+                             src={plus} 
+                             alt="plus"/>
                     </div>
                     <div className={classes.params}>
                         <div className={classes.step}>
@@ -71,7 +93,7 @@ let ItemsList = (props) => {
 
     return (
         <>
-            {item}
+            {item.length === 0 ? <div className={classes.clearBasket}><h3>У Вас в корзине пусто</h3></div> : item}
         </>
     )
 }

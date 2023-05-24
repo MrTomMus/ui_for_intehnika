@@ -8,8 +8,9 @@ import ItemsList from "./ItemList/ItemList";
 
 
 let Basket = (props) => {
-    
+
     let [state, setState] = useState();
+    let [isChecked, setChecked] = useState(false)
 
     useEffect(() => {
         if(state === undefined)
@@ -28,7 +29,14 @@ let Basket = (props) => {
         />
       );
 
-    console.log(state)
+    let checkedAll = () => {
+        setChecked(!isChecked)
+        if(isChecked === true){
+            setState(state.map(obj => obj.check === true ? {...obj, check: false} : obj))
+        }else{
+            setState(state.map(obj => obj.check === false ? {...obj, check: true} : obj))
+        }
+    }
 
 
     return (state === undefined ? <div className={classes.loading}><Spin indicator={antIcon} /></div> : 
@@ -39,12 +47,18 @@ let Basket = (props) => {
                 </div>
                 <div className={classes.choice}>
                 <label>
-                    <input type='checkbox'/>
-                    <span></span>  
+                    <input checked={isChecked} type='checkbox'/>
+                    <span onClick={() => checkedAll()}></span>  
                 </label>
                     <span className={classes.choiceAll}>Выбрать все</span>
-                    <img className={classes.img} src={vector} alt="vector" />
-                    <span className={classes.deleteChoice}>Удалить выбранное</span>
+                    <img onClick={() => {
+                        setChecked(false)
+                        setState(state.map(obj => obj.check === true ? {...obj, check: false} : obj))}} 
+                        className={`${classes.img} ${(state.some(obj => obj.check === true)) && classes.imgActive}`} 
+                        src={vector} 
+                        alt="vector" />
+                    <span onClick={() => setState(state.filter(obj => {if(!obj.check) return obj}))} 
+                          className={`${classes.deleteChoice} ${(state.some(obj => obj.check === true)) && classes.deleteChoiceActive}`}>Удалить выбранное</span>
                 </div>
                 <div className={classes.list}>
                     <ItemsList state={state} setState={setState}/>

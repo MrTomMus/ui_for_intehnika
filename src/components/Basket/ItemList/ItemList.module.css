@@ -55,6 +55,8 @@
     margin-right: 32px;
 }
 
+
+
 .like__icon {
     margin-right: 19px;
 }
@@ -62,6 +64,10 @@
 .like__icon,
 .basket__icon {
     cursor: pointer;
+}
+
+.like__icon {
+    color: red;
 }
 
 .counter {
@@ -89,11 +95,13 @@
 .minus {
     margin-left: 19px;
     cursor: pointer;
+    padding: 17px 0 17px 0;
 }
 
 .plus {
     margin-right: 19px;
     cursor: pointer;
+    padding: 17px 0 17px 0;
 }
 
 .params {
@@ -209,3 +217,9 @@
     cursor: pointer;
     margin-left: 5px;
 }
+
+.clearBasket {
+    width: 100%;
+    text-align: center;
+}
+
