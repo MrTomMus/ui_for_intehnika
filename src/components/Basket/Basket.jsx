@@ -14,7 +14,6 @@ let Basket = (props) => {
 
     useEffect(() => {
         if(state === undefined)
-            console.log('test')
             setTimeout(() => setState(catalog), 1000)
       
     },[])

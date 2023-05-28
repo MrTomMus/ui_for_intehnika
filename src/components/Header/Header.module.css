@@ -34,3 +34,10 @@
     letter-spacing: -0.01em;
     color: #15181C;
 }
+
+@media screen and (max-width: 768px) {
+    .container {
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+}

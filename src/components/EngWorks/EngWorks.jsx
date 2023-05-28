@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 let EngWorks = () => {
     return (
         <div className={classes.container}>
-            <h2 className={classes.text}>Ведуться технические работы перейдите в раздел <Link to='/basket'>Корзина</Link></h2>
+            <h2 className={classes.text}>Ведутся технические работы, перейдите в раздел <Link to='/basket'>Корзина</Link></h2>
         </div>
     )
 }

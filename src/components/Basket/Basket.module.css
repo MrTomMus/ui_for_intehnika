@@ -96,3 +96,47 @@ label span {
   .deleteChoiceActive {
     display: inline;
   }
+
+  @media screen and (max-width: 768px) {
+    .container {
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+
+    .text {
+      font-family: 'Golos';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 38px;
+      letter-spacing: -0.02em;
+      color: #15181C;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .container {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    .choice {
+      justify-content: space-between;
+    }
+
+    .img {
+      order: -3;
+    }
+
+    .deleteChoice {
+      order: -2;
+    }
+
+    .choiceAll {
+      order: -1;
+    }
+
+    label {
+      margin-right: 0px;
+    }
+}
